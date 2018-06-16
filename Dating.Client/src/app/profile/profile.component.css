@@ -1,0 +1,39 @@
+
+
+
+.profile-img-main
+{
+  margin: 25px;
+  width: 85%;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+/***
+Bootstrap Line Tabs by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+
+
+
+
+
+
+/*@media (max-width:768px){*/
+
+  /*.fb-profile-text>h1{*/
+    /*font-weight: 700;*/
+    /*font-size:16px;*/
+  /*}*/
+
+  /*.fb-image-profile*/
+  /*{*/
+    /*margin: -45px 10px 0px 25px;*/
+    /*z-index: 9;*/
+    /*width: 20%;*/
+  /*}*/
+/*}*/

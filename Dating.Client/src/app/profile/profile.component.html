@@ -1,0 +1,96 @@
+<div class="row ">
+  <div class="container vertical-align">
+    <div class="col-sm-4">
+      <h1>{{profile.firstName}}'s Profile</h1>
+    </div>
+
+
+    <div class="col-md-8" *ngIf="accountService.currentUser.id == profile.id && !editMode">
+      <button class="btn btn-primary" (click)="toggleEditMode()">Edit Profile</button>
+    </div>
+
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="container">
+    <div class="col-sm-4">
+      <div class="panel panel-default">
+        <img align="left" class="profile-img-main thumbnail" [src]="profile.photoUrl"
+             alt="Profile image example"/>
+        <div class="panel-body" style="margin-left: 20px;">
+          <div class="row">
+            <div class="col-lg-12">
+
+              <!--form start-->
+              <div class="form-group">
+                <label>Location:</label>
+                <p>{{profile.city}}, {{profile.country}}</p>
+              </div>
+              <div class="form-group">
+                <label>Age:</label>
+                <p>{{profile.age}}</p>
+              </div>
+              <div class="form-group">
+                <label>Last Active:</label>
+                <p>{{profile.lastActive}}</p>
+              </div>
+              <div class="form-group">
+                <label>Member since:</label>
+                <p>{{profile.created}}</p>
+              </div>
+              <div *ngIf="accountService.currentUser.id != profile.id">
+                <button type="button" class="btn btn-primary" style="width:80px; margin-right: 10px">Like</button>
+                <button type="button" class="btn btn-success" style="width:80px">Message</button>
+              </div>
+              <!--form end-->
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <form name="form" #profileForm="ngForm" (ngSubmit)="profileForm.valid && updateProfile()" novalidate>
+        <div class="tabbable-panel">
+          <tabset class="tabbable-line">
+            <tab heading="About Eli" class="customClass">
+              <h4>Description</h4>
+              <p *ngIf="!editMode">{{profile.description}}</p>
+              <textarea class="form-control" *ngIf="editMode"
+                        rows="6"
+                        [(ngModel)]="profile.description"
+                        name="description"></textarea>
+              <h4>Looking For</h4>
+              <p *ngIf="!editMode">{{profile.lookingFor}}</p>
+              <textarea class="form-control" *ngIf="editMode"
+                        rows="6"
+                        [(ngModel)]="profile.lookingFor"
+                        name="lookingFor"></textarea>
+            </tab>
+            <tab heading="Interests" class="customClass">
+              Interests go here
+            </tab>
+            <tab heading="Looking For">
+              Looking for goes here
+            </tab>
+            <tab heading="Photos">
+              <div *ngFor="let photo of profile.photos">
+                <img class="thumbnail" [src]="photo.url" />
+              </div>
+            </tab>
+          </tabset>
+        </div>
+
+        <div *ngIf="editMode" style="margin-top: 20px;">
+          <button class="btn btn-success">Save Profile</button>
+          <button class="btn btn-default" (click)="toggleEditMode()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,23 @@
+.profile{
+  border: 1px solid black;
+  width:150px;
+  height: 215px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.profile:hover{
+  background-color: #FF916B;
+  opacity: 0.9;
+}
+.profilepic{
+  margin-top:10px;
+  margin-bottom: 5px;
+}
+.profileName{
+  font-weight:bold;
+}
+.profileImg{
+  width: 80%;
+}

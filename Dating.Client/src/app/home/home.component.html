@@ -1,0 +1,12 @@
+  <h1>My Matches</h1>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-2 profile" *ngFor="let profile of profiles" [routerLink]="['/profile/', profile.id]" style="cursor: pointer">
+        <img class="profilepic img-responsive" src="{{profile.photoUrl}}" onError="this.src='/assets/images/nophoto.jpg'" alt="" style="max-height: 118px; min-width: 118px">
+        <p class="profileName text-center">{{profile.firstName}}, {{profile.age}}</p>
+        <p class="location text-center">{{profile.city}}</p>
+      </div>
+    </div>
+
+  </div>
