@@ -3,7 +3,7 @@ A Dating web application using Angular | ASP.NET Core | Entity Framework Core | 
 
 
 ## Objective
-* The goal is to build dating web application which make communication easier for people who want to meet, flirt, chat, and potentially get romantically involved.
+* The goal is to build dating web application which enables users to create profiles, search other users, upload/view photos and send private messages to matched profiles.
 * The project was developed as Web app using technologies such as ASP.NET MVC | Entity Framework | MS SQL Server 
 (.NET Stack)
 
