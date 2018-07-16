@@ -1,10 +1,10 @@
 # Dating-App
-A Dating web application using Angular | ASP.NET Core | Entity Framework Core | ASP.NET Web API | MS SQL Server
+A Dating web application using Angular | ASP.NET Core | Entity Framework Core | MS SQL Server
 
 
 ## Objective
 * The goal is to build dating web application which make communication easier for people who want to meet, flirt, chat, and potentially get romantically involved.
-* The project was developed as Web app using technologies such as ASP.NET MVC | Entity Framework | ASP.NET Web API | MS SQL Server 
+* The project was developed as Web app using technologies such as ASP.NET MVC | Entity Framework | MS SQL Server 
 (.NET Stack)
 
 ## System Design
